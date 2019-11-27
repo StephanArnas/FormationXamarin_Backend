@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CryptoBankBackend.Web</name>
+    </assembly>
+    <members>
+        <member name="M:CryptoBankBackend.Web.Controllers.AuthController.Login(CryptoBankBackend.Web.Models.Api.LoginApi)">
+             <summary>
+             Log in into OneBoard with a login / password.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Login
+                 {
+                    "email": "stephan.arnas@gmail.com",
+                    "password": "Aze123"
+                 }
+                 
+             </remarks>
+             <param name="login">Credential information.</param>
+        </member>
+    </members>
+</doc>

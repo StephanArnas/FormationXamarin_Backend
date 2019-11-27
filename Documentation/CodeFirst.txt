@@ -1,0 +1,5 @@
+# ----- Initial Create ------------------------------------------------------------
+
+Add-Migration "InitialCreate" -Project CryptoBankBackend.Infrastructure
+
+Update-Database

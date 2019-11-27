@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoBankBackend.Web", "CryptoBankBackend.Web.csproj", "{4E78794E-0BD3-4BF8-A45C-B1897ECC3BF9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoBankBackend.Core", "..\CryptoBankBack.Core\CryptoBankBackend.Core.csproj", "{C5788261-A47F-4A8F-B04F-2855B7BC0221}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoBankBackend.Infrastructure", "..\CryptoBankBackend.Infrastructure\CryptoBankBackend.Infrastructure.csproj", "{65E7FC24-8B09-4D1D-8A06-2463FF9B6FA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoBankBackend.Common", "..\CryptoBankBackend.Common\CryptoBankBackend.Common.csproj", "{2F884E33-B1C0-4A7B-B12D-EB4705691B31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{4DD84D60-E924-4FF3-8DB3-E89E776900F1}"
+	ProjectSection(SolutionItems) = preProject
+		..\Documentation\CodeFirst.txt = ..\Documentation\CodeFirst.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E78794E-0BD3-4BF8-A45C-B1897ECC3BF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E78794E-0BD3-4BF8-A45C-B1897ECC3BF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E78794E-0BD3-4BF8-A45C-B1897ECC3BF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E78794E-0BD3-4BF8-A45C-B1897ECC3BF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5788261-A47F-4A8F-B04F-2855B7BC0221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5788261-A47F-4A8F-B04F-2855B7BC0221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5788261-A47F-4A8F-B04F-2855B7BC0221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5788261-A47F-4A8F-B04F-2855B7BC0221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65E7FC24-8B09-4D1D-8A06-2463FF9B6FA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65E7FC24-8B09-4D1D-8A06-2463FF9B6FA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65E7FC24-8B09-4D1D-8A06-2463FF9B6FA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65E7FC24-8B09-4D1D-8A06-2463FF9B6FA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F884E33-B1C0-4A7B-B12D-EB4705691B31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F884E33-B1C0-4A7B-B12D-EB4705691B31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F884E33-B1C0-4A7B-B12D-EB4705691B31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F884E33-B1C0-4A7B-B12D-EB4705691B31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {354ED458-9596-4CC6-A4CA-00E110E953DF}
+	EndGlobalSection
+EndGlobal
