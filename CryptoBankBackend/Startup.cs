@@ -66,7 +66,7 @@ namespace CryptoBankBackend
 
 #if DEBUG
             services.AddDbContext<ApplicationDbContext>(
-                options => options.UseSqlServer(Configuration["SQL:ConnectionString:Local"],
+                options => options.UseSqlServer(Configuration["SQL:ConnectionString:Staging"],
                 optionsBuilder =>
                 {
                     optionsBuilder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);

@@ -34,18 +34,18 @@ namespace CryptoBankBackend.Web.Controllers
         #region ----- WEBSERVICE METHODS ----------------------------------------------
 
         [HttpGet]
-        [Route("api/v1/[controller]/[action]/{userId}")]
+        [Route("api/v1/[controller]/[action]/{userId}/{page}")]
         [ProducesResponseType(typeof(IEnumerable<OperationApi>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetAll(int userId, [FromQuery]int? page)
+        public async Task<IActionResult> GetAll(int userId, int page)
         {
             var operationsDb = await _operationService.GetAllAsync(userId, page);
             return Ok(_mapper.Map<IEnumerable<OperationApi>>(operationsDb));
         }
 
         [HttpGet]
-        [Route("api/v1/[controller]/[action]/{userId}")]
+        [Route("api/v1/[controller]/[action]/{userId}/{operationId}")]
         [ProducesResponseType(typeof(OperationApi), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> Get(int userId, [FromQuery]int operationId)
+        public async Task<IActionResult> Get(int userId, int operationId)
         {
             var operationDb = await _operationService.GetAsync(userId, operationId);
             return Ok(_mapper.Map<OperationApi>(operationDb));

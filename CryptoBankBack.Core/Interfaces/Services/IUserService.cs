@@ -8,7 +8,7 @@ namespace CryptoBankBackend.Core.Interfaces.Services
 {
     public interface IUserService
     {
-        Task<bool> LoginAsync(string userEmail, string userPassword);
+        Task<int> LoginAsync(string userEmail, string userPassword);
 
         Task<UserEntity> GetAsync(int userId, bool withCollections = false);
         Task<UserEntity> GetAsync(string userEmail);

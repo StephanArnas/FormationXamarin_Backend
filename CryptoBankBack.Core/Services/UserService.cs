@@ -52,20 +52,20 @@ namespace CryptoBankBackend.Core.Services
             return userDb;
         }
 
-        public async Task<bool> LoginAsync(string userEmail, string userPassword)
+        public async Task<int> LoginAsync(string userEmail, string userPassword)
         {
             var userDb = await _userRepository.GetAsync(userEmail);
             if (userDb == null)
             {
-                throw new NotFoundException("User not found");
+                throw new NotFoundException("Wrong email.");
             }
 
             if (userDb.Password != userPassword)
             {
-                throw new UnauthorizedException("User not found");
+                throw new UnauthorizedException("Wrong password.");
             }
 
-            return true;
+            return userDb.Id;
         }
 
         #endregion

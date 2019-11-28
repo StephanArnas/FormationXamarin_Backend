@@ -50,13 +50,13 @@ namespace CryptoBankBackend.Web.Controllers
         /// <param name="login">Credential information.</param>
         [HttpPost, AllowAnonymous]
         [Route("api/v1/[controller]/[action]")]
-        [ProducesResponseType(typeof(bool), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(int), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(ResponseErrorApi), (int)HttpStatusCode.BadRequest)]
         [ProducesResponseType(typeof(ResponseErrorApi), (int)HttpStatusCode.NotFound)]
         public async Task<IActionResult> Login([FromBody]LoginApi login)
         {
-            var isUserAuth = await _userService.LoginAsync(login.Email, login.Password);
-            return Ok(isUserAuth);
+            var userId = await _userService.LoginAsync(login.Email, login.Password);
+            return Ok(userId);
         }
 
         #endregion
