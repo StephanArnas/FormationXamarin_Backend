@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoBankBackend.Core", ".
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoBankBackend.Infrastructure", "..\CryptoBankBackend.Infrastructure\CryptoBankBackend.Infrastructure.csproj", "{65E7FC24-8B09-4D1D-8A06-2463FF9B6FA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoBankBackend.Common", "..\CryptoBankBackend.Common\CryptoBankBackend.Common.csproj", "{2F884E33-B1C0-4A7B-B12D-EB4705691B31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoBankBackend.Common", "..\CryptoBankBackend.Common\CryptoBankBackend.Common.csproj", "{2F884E33-B1C0-4A7B-B12D-EB4705691B31}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{4DD84D60-E924-4FF3-8DB3-E89E776900F1}"
 	ProjectSection(SolutionItems) = preProject

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using CryptoBankBackend.Common.Exceptions;
 using CryptoBankBackend.Core.Interfaces.Services;
 using CryptoBankBackend.Web.Models.Api;
 using Microsoft.AspNetCore.Authorization;
@@ -55,6 +56,9 @@ namespace CryptoBankBackend.Web.Controllers
         [ProducesResponseType(typeof(ResponseErrorApi), (int)HttpStatusCode.NotFound)]
         public async Task<IActionResult> Login([FromBody]LoginApi login)
         {
+            if (string.IsNullOrEmpty(login.Email)) throw new BadRequestException($"{nameof(LoginApi.Email)} can't be null or empty.");
+            if (string.IsNullOrEmpty(login.Password)) throw new BadRequestException($"{nameof(LoginApi.Password)} can't be null or empty.");
+
             var userId = await _userService.LoginAsync(login.Email, login.Password);
             return Ok(userId);
         }

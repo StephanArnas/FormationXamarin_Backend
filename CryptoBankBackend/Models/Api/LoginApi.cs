@@ -8,10 +8,8 @@ namespace CryptoBankBackend.Web.Models.Api
 {
     public class LoginApi
     {
-        [Required]
         public string Email { get; set; }
 
-        [Required]
         public string Password { get; set; }
     }
 }
