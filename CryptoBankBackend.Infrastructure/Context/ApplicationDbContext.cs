@@ -68,6 +68,18 @@ namespace CryptoBankBackend.Infrastructure.Context
                 CreatedDate = DateTimeOffset.UtcNow,
             });
 
+            // User Stephan Arnas.
+            source.Add(new UserEntity()
+            {
+                Id = 2,
+                FirstName = "Remond",
+                LastName = "Dumond",
+                Email = "remond.dumond@gmail.com",
+                Password = "Aze123",
+                Credits = 125,
+                CreatedDate = DateTimeOffset.UtcNow,
+            });
+
             return source;
         }
 
@@ -195,6 +207,285 @@ namespace CryptoBankBackend.Infrastructure.Context
                 UserId = 1,
             });
 
+            source.Add(new OperationEntity()
+            {
+                Id = 13,
+                Name = "Pour le resto de lundi au boulot ! Merci !",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "jepaiemesdettes@gmail.com",
+                Amount = 20,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 14,
+                Name = "Café du matin",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "machineacafe@gmail.com",
+                Amount = -2,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 15,
+                Name = "Café de l'après midi",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "machineacafe@gmail.com",
+                Amount = -2,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 16,
+                Name = "Café du soir",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "machineacafe@gmail.com",
+                Amount = -2,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 17,
+                Name = "Café de la nuit",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "machineacafe@gmail.com",
+                Amount = -2,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 18,
+                Name = "C'est pour le café de mardi",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "collegueacafe@gmail.com",
+                Amount = 2,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 19,
+                Name = "Repas CE",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "cedelaboite@gmail.com",
+                Amount = 50,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 20,
+                Name = "Noel pour mon cherie !",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "cedelaboite@gmail.com",
+                Amount = 500,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 21,
+                Name = "Tranche de pain",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "jaifaim@gmail.com",
+                Amount = -1.62,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 22,
+                Name = "Tranche de pain le retour",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "jaitresfaim@gmail.com",
+                Amount = -1.45,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 23,
+                Name = "Location de film",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "rentdvd@gmail.com",
+                Amount = -4.99,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 24,
+                Name = "Location de film",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "rentdvd@gmail.com",
+                Amount = -3.99,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 25,
+                Name = "Location de film",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "rentdvd@gmail.com",
+                Amount = -3.99,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 26,
+                Name = "Location de film",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "rentdvd@gmail.com",
+                Amount = -3.99,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 27,
+                Name = "Location de film",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "rentdvd@gmail.com",
+                Amount = -3.99,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 28,
+                Name = "Location de film",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "rentdvd@gmail.com",
+                Amount = -3.99,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 29,
+                Name = "Location de film",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "rentdvd@gmail.com",
+                Amount = -4.99,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 30,
+                Name = "Location de film",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "rentdvd@gmail.com",
+                Amount = -7.99,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 31,
+                Name = "Courses Auchant",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "encouple@gmail.com",
+                Amount = 24.12,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 32,
+                Name = "Remboursement resto soirée",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "encouple@gmail.com",
+                Amount = 24.12,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 33,
+                Name = "Verre en ville",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "copain@gmail.com",
+                Amount = -7.30,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 34,
+                Name = "Kebab",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "copain@gmail.com",
+                Amount = -6.50,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 35,
+                Name = "Cadeau Montre",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "wow@gmail.com",
+                Amount = 120,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 36,
+                Name = "Soirée Kebab",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "copain@gmail.com",
+                Amount = -28,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 37,
+                Name = "Salle de sport",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "workout@gmail.com",
+                Amount = -16,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 38,
+                Name = "Soiré ciné",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "copain@gmail.com",
+                Amount = -12.50,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 39,
+                Name = "Kebab",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "copain@gmail.com",
+                Amount = -6.50,
+                UserId = 1,
+            });
+
+            source.Add(new OperationEntity()
+            {
+                Id = 40,
+                Name = "Rembousement pro",
+                TransactionNumber = Guid.NewGuid().ToString(),
+                RecipientEmail = "company@gmail.com",
+                Amount = 50.50,
+                UserId = 1,
+            });
 
             return source;
         }
