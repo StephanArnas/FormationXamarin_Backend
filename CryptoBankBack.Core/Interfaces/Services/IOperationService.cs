@@ -12,5 +12,6 @@ namespace CryptoBankBackend.Core.Interfaces.Services
         Task<OperationEntity> GetAsync(int userId, int operationId);
         Task CreateAsync(int userId, OperationEntity operation);
         Task UpdateAsync(int userId, OperationEntity operation);
+        Task<int> GetCountAllAsync(int userId);
     }
 }

@@ -35,7 +35,7 @@ namespace CryptoBankBackend.Infrastructure.Repositories
         public async Task<IEnumerable<OperationEntity>> GetAllAsync(int userId, int? page)
         {
             return await Context.Operations
-                .OrderBy(x => x.CreatedDate)
+                .OrderByDescending(x => x.CreatedDate)
                 .Skip(page.HasValue ? (page.Value - 1) * PAGE_SIZE_SMALL : 0 * PAGE_SIZE_SMALL)
                 .Take(PAGE_SIZE_SMALL)
                 .Where(x => x.UserId == userId)

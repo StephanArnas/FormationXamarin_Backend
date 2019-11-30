@@ -61,6 +61,11 @@ namespace CryptoBankBackend.Core.Services
             return operationDb;
         }
 
+        public async Task<int> GetCountAllAsync(int userId)
+        {
+            return await _operationRepository.CountAsync(x => x.UserId == userId);
+        }
+
         public async Task CreateAsync(int userId, OperationEntity operation)
         {
             if (operation == null) throw new BadRequestException("Operation payload could not be null.");
@@ -73,6 +78,8 @@ namespace CryptoBankBackend.Core.Services
             var recipientDb = await _userRepository.GetAsync(operation.RecipientEmail);
             if (recipientDb == null) throw new NotFoundException("Recipient not found.");
 
+            var createdDate = DateTimeOffset.UtcNow;
+
             recipientDb.Credits += operation.Amount;
             var recipientOperation = new OperationEntity();
             recipientOperation.Name = operation.Name;
@@ -80,10 +87,12 @@ namespace CryptoBankBackend.Core.Services
             recipientOperation.RecipientEmail = userDb.Email;
             recipientOperation.Amount = operation.Amount;
             recipientOperation.UserId = recipientDb.Id;
+            recipientOperation.CreatedDate = createdDate;
 
             operation.TransactionNumber = Guid.NewGuid().ToString();
             operation.Amount = operation.Amount * -1;
             operation.UserId = userId;
+            operation.CreatedDate = createdDate;
             userDb.Credits += operation.Amount;
 
             await _operationRepository.AddAsync(operation);
