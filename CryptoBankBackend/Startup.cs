@@ -26,6 +26,8 @@ using System.Reflection;
 using System.IO;
 using AutoMapper;
 using CryptoBankBackend.Middlewares;
+using CryptoBankBackend.Core.Interfaces;
+using CryptoBankBackend.Infrastructure.Notifications;
 
 namespace CryptoBankBackend
 {
@@ -55,6 +57,9 @@ namespace CryptoBankBackend
         {
             // Register configuration.
             services.AddSingleton(Configuration);
+
+            // Register notification.
+            services.AddTransient<INotificationService, NotificationService>();
 
             // Register repositories.
             services.AddTransient<IUserRepository, UserRepository>();

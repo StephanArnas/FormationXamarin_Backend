@@ -1,4 +1,5 @@
 ﻿using CryptoBankBackend.Common.Exceptions;
+using CryptoBankBackend.Core.Interfaces;
 using CryptoBankBackend.Core.Interfaces.Repositories;
 using CryptoBankBackend.Core.Interfaces.Services;
 using CryptoBankBackend.Core.Models.Entities;
@@ -16,6 +17,7 @@ namespace CryptoBankBackend.Core.Services
 
         private readonly IOperationRepository _operationRepository = null;
         private readonly IUserRepository _userRepository = null;
+        private readonly INotificationService _notificationService = null;
 
         #endregion
 
@@ -23,10 +25,12 @@ namespace CryptoBankBackend.Core.Services
 
         public OperationService(IConfiguration configuration
             , IOperationRepository operationRepository
-            , IUserRepository userRepository) : base(configuration)
+            , IUserRepository userRepository
+            , INotificationService notificationService) : base(configuration)
         {
             _operationRepository = operationRepository;
             _userRepository = userRepository;
+            _notificationService = notificationService;
         }
 
         #endregion
@@ -97,6 +101,9 @@ namespace CryptoBankBackend.Core.Services
 
             await _operationRepository.AddAsync(operation);
             await _operationRepository.AddAsync(recipientOperation);
+
+            _notificationService.SendNotification(userDb.Id, "", "Vous avez envoyé " + recipientOperation.Amount + " à " + recipientDb.Email + " envoyé !");
+            _notificationService.SendNotification(recipientDb.Id, "", "Vous avez reçu " + recipientOperation.Amount + " de la part de " + userDb.Email + "!");
         }
 
         public async Task UpdateAsync(int userId, OperationEntity operation)
