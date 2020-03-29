@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using CryptoBankBackend.Common.Extensions;
 using CryptoBankBackend.Core.Interfaces.Services;
+using CryptoBankBackend.Core.Models.Entities;
 using CryptoBankBackend.Web.Models.Api;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -39,7 +40,7 @@ namespace CryptoBankBackend.Controllers
         [ProducesResponseType(typeof(UserApi), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> Get(int userId)
         {
-            var userDb = await _userService.GetAsync(userId, true);
+            UserEntity userDb = await _userService.GetAsync(userId, true);
             return Ok(_mapper.Map<UserApi>(userDb));
         }
 

@@ -59,6 +59,7 @@ namespace CryptoBankBackend
             services.AddSingleton(Configuration);
 
             // Register notification.
+            
             services.AddTransient<INotificationService, NotificationService>();
 
             // Register repositories.
